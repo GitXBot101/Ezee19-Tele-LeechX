@@ -51,7 +51,7 @@ if os.environ.get('UPDATE_EVERYTHING_WHEN_RESTART', 'False').lower() == 'true':
 ## Update Packages ----
 
 UPSTREAM_REPO = os.environ.get('UPSTREAM_REPO', "https://github.com/5MysterySD/Tele-LeechX")
-UPSTREAM_BRANCH = os.environ.get('UPSTREAM_BRANCH', "h-code")
+UPSTREAM_BRANCH = os.environ.get('UPSTREAM_BRANCH', "beta")
 try:
     if len(UPSTREAM_REPO) == 0:
        raise TypeError
@@ -61,7 +61,7 @@ try:
     if len(UPSTREAM_BRANCH) == 0:
        raise TypeError
 except:
-    UPSTREAM_BRANCH = 'h-code'
+    UPSTREAM_BRANCH = 'beta'
 
 if UPSTREAM_REPO is not None:
     if os.path.exists('.git'):
